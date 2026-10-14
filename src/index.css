@@ -1,10 +1,165 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Estilos globales y reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  background-color: #030712; /* Fondo oscuro elegante (slate-950) */
-  color: #f8fafc; /* Texto claro (slate-50) */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #0f172a; /* Fondo azul oscuro/slate */
+  color: #f8fafc; /* Texto blanco suave */
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* Layout y contenedor principal */
+.container-custom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header y Nav */
+.header-bg {
+  background-color: #1e293b;
+  padding: 1rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #38bdf8; /* Azul claro brillante visible */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* Catálogo de Productos (Grilla de 3 productos uno al lado del otro) */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Tarjeta de Producto */
+.card-item {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-container {
+  height: 200px;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #334155;
+}
+
+/* Formulario Centrado */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto 0 auto; /* Centrado horizontal */
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.form-btn {
+  width: 100%;
+  background-color: #0284c7;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #0369a1;
+}
+
+/* Footer y Tarjetas de Personas (Uno al lado del otro) */
+.footer-bg {
+  background-color: #090d16;
+  padding: 30px 0 20px 0;
+  margin-top: 50px;
+  border-top: 1px solid #334155;
+}
+
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.card-persona {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 12px;
+  border-radius: 8px;
 }

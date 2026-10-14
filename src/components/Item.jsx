@@ -1,21 +1,17 @@
+import React from 'react';
+
 export default function Item({ id, nombre, precio, stock, urlImagen }) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg flex flex-col hover:border-cyan-500 transition-all">
-      <div className="h-48 overflow-hidden bg-slate-800 relative">
-        <img 
-          src={urlImagen} 
-          alt={nombre} 
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-        />
+    <div className="card-item">
+      <div className="card-img-container">
+        <img src={urlImagen} alt={nombre} className="card-img" />
       </div>
-      <div className="p-4 flex flex-col flex-grow">
-        <span className="text-xs text-cyan-400 font-semibold mb-1">ID: {id}</span>
-        <h3 className="text-lg font-bold text-white mb-2">{nombre}</h3>
-        <div className="mt-auto flex justify-between items-center pt-3 border-t border-slate-800">
-          <span className="text-xl font-extrabold text-emerald-400">${precio}</span>
-          <span className="text-xs text-slate-400 bg-slate-800 px-2.5 py-1 rounded-full">
-            Stock: {stock}
-          </span>
+      <div className="card-body">
+        <span style={{ fontSize: '0.8rem', color: '#38bdf8' }}>ID: {id}</span>
+        <h3 style={{ margin: '8px 0', fontSize: '1.1rem' }}>{nombre}</h3>
+        <div className="card-footer">
+          <span style={{ fontSize: '1.2rem', color: '#4ade80', fontWeight: 'bold' }}>${precio}</span>
+          <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Stock: {stock}</span>
         </div>
       </div>
     </div>
